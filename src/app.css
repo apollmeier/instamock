@@ -1,3 +1,30 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities'
+@import 'tailwindcss/utilities';
+
+@layer base {
+    @font-face {
+        font-family: 'Roboto';
+        src: url('/fonts/Roboto/Roboto-VariableFont_wdth,wght.woff2') format('woff2-variations');
+        font-weight: 125 950;
+        font-stretch: 75% 125%;
+
+        font-style: normal;
+    }
+
+    html {
+        @apply font-light
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-normal
+    }
+}
+
+@layer utilities {
+    .text-instagram {
+        background-image: linear-gradient(-45deg, #7638FA, #D300C5, #FF0069, #FF7A00, #FFD600);
+        background-clip: text;
+        color: transparent;
+    }
+}
