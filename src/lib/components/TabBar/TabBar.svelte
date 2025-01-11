@@ -14,8 +14,8 @@
     ]
 </script>
 
-<div class="absolute bottom-0 w-full">
-    <nav class="px-6 pt-2 pb-5">
+<div class="absolute bottom-0 w-full bg-white">
+    <nav class="pt-2 pb-5">
         <ul class="grid grid-cols-5">
             {#each tabs as tab}
                 <li>
