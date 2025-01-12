@@ -1,8 +1,8 @@
 <script>
-    import IconHomeFull from 'virtual:icons/instamock/home_full';
-    import IconSearch from 'virtual:icons/instamock/search';
-    import IconCreate from 'virtual:icons/instamock/create';
-    import IconReels from 'virtual:icons/instamock/reels';
+    import IconHomeFull from '~icons/instamock24/HomeFilled';
+    import IconSearch from '~icons/instamock24/Search';
+    import IconCreate from '~icons/instamock24/Create';
+    import IconReels from '~icons/instamock24/Reels';
 
     import Avatar from '$lib/components/Avatar/Avatar.svelte';
 
