@@ -22,9 +22,7 @@
 }
 
 @layer utilities {
-    .text-instagram {
+    .bg-gradient-instagram {
         background-image: linear-gradient(-45deg, #7638FA, #D300C5, #FF0069, #FF7A00, #FFD600);
-        background-clip: text;
-        color: transparent;
     }
 }
