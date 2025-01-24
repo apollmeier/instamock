@@ -23,9 +23,7 @@
                 </li>
             {/each}
             <li>
-                <Avatar>
-                    <img src="https://picsum.photos/20/20" alt=""/>
-                </Avatar>
+                <Avatar src="https://picsum.photos/48/48"/>
             </li>
         </ul>
     </nav>
