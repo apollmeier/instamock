@@ -5,14 +5,14 @@
         status,
     } = $props()
 
-    let className;
+    let className = $state('');
 
     switch (status) {
         case 'read':
             className = 'bg-gray-30';
             break;
         case 'new':
-            className = 'bg-gradient-instagram'
+            className = 'bg-linear-225 bg-linear-instagram'
             break;
         case 'close-friend':
             className = 'bg-green-100'
