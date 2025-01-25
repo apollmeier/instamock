@@ -3,6 +3,7 @@
     import TabBar from "$lib/components/Bars/TabBar.svelte";
     import StatusBar from "$lib/components/Bars/StatusBar.svelte";
     import NavigationBar from "$lib/components/Bars/NavigationBar.svelte";
+    import Stories from "$lib/components/Stories/Stories.svelte";
 </script>
 
 <section class="min-h-screen flex justify-center items-center">
@@ -10,6 +11,7 @@
         <StatusBar />
         <div>
             <NavigationBar />
+            <Stories />
         </div>
         <TabBar />
     </Device>
