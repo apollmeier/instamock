@@ -33,6 +33,6 @@
 
 <style>
     ul > li {
-        flex-shrink: 0;
+        shrink: 0;
     }
 </style>

@@ -8,7 +8,7 @@
 
 <div>
     <div class="relative flex justify-center items-center">
-        <img {src} class="rounded-full aspect-square size-[6]" alt="">
+        <img {src} class="rounded-full aspect-square size-6" alt="">
 
         {@render children?.()}
     </div>

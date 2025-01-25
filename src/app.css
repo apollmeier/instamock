@@ -1,6 +1,113 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/forms';
+
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-gray-10: #f7f9f9;
+  --color-gray-20: #f3f4f6;
+  --color-gray-30: #dbdfe4;
+  --color-gray-40: #a2aab4;
+  --color-gray-50: #212328;
+  --color-gray-60: #6f7680;
+  --color-gray-70: #5e646d;
+  --color-gray-80: #25292e;
+  --color-gray-100: #0c1014;
+
+  --color-yellow-10: #fffdf1;
+  --color-yellow-20: #fff4b8;
+  --color-yellow-40: #ffec8a;
+  --color-yellow-60: #ffe55c;
+  --color-yellow-80: #ffdd2e;
+  --color-yellow-100: #ffd600;
+
+  --color-orange-10: #fff8f1;
+  --color-orange-20: #ffdab8;
+  --color-orange-40: #ffc28a;
+  --color-orange-60: #ffaa5c;
+  --color-orange-80: #ff922e;
+  --color-orange-100: #ff7a00;
+
+  --color-pink-10: #fff1f7;
+  --color-pink-20: #ffb8d5;
+  --color-pink-40: #ff8aba;
+  --color-pink-60: #ff5c9f;
+  --color-pink-80: #ff2e84;
+  --color-pink-100: #ff0069;
+
+  --color-magenta-10: #fff0fe;
+  --color-magenta-20: #ffa8f9;
+  --color-magenta-40: #ff5ef4;
+  --color-magenta-60: #ff30f1;
+  --color-magenta-80: #ff02ee;
+  --color-magenta-100: #d300c5;
+
+  --color-purple-10: #f2ebff;
+  --color-purple-20: #d3bffd;
+  --color-purple-40: #b492fc;
+  --color-purple-60: #9565fb;
+  --color-purple-80: #7638fa;
+  --color-purple-100: #5c12f9;
+
+  --color-blue-10: #eff9ff;
+  --color-blue-20: #9ad6ff;
+  --color-blue-40: #4fb9ff;
+  --color-blue-60: #0098fd;
+  --color-blue-80: #006bb3;
+  --color-blue-100: #00386e;
+
+  --color-red-10: #fff1f4;
+  --color-red-20: #ffb8c6;
+  --color-red-40: #ff8aa2;
+  --color-red-60: #ff5c7d;
+  --color-red-80: #ff2e59;
+  --color-red-100: #ff0034;
+
+  --color-green-10: #ccffcc;
+  --color-green-20: #93ff93;
+  --color-green-40: #65ff65;
+  --color-green-60: #37ff37;
+  --color-green-80: #09ff09;
+  --color-green-100: #00da00;
+
+  --font-sans: Roboto, ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility bg-gradient-instagram {
+  background-image: linear-gradient(
+    -45deg,
+    #7638fa,
+    #d300c5,
+    #ff0069,
+    #ff7a00,
+    #ffd600
+  );
+}
 
 @layer base {
     @font-face {
@@ -18,11 +125,5 @@
 
     h1, h2, h3, h4, h5, h6 {
         @apply font-normal
-    }
-}
-
-@layer utilities {
-    .bg-gradient-instagram {
-        background-image: linear-gradient(-45deg, #7638FA, #D300C5, #FF0069, #FF7A00, #FFD600);
     }
 }
