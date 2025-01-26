@@ -14,7 +14,7 @@
     ]
 </script>
 
-<div class="absolute bottom-0 w-full bg-white border-t border-gray-30">
+<section class="absolute bottom-0 w-full bg-white border-t border-gray-30">
     <nav class="pt-2 pb-5">
         <ul class="grid grid-cols-5">
             {#each tabs as tab}
@@ -30,7 +30,7 @@
     <div class="px-6 py-2">
         <div class="h-[5px] w-36 mx-auto bg-black rounded-full"></div>
     </div>
-</div>
+</section>
 
 <style>
     ul > li {
