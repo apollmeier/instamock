@@ -4,6 +4,7 @@
     import StatusBar from "$lib/components/Bar/StatusBar.svelte";
     import NavigationBar from "$lib/components/Bar/NavigationBar.svelte";
     import StoryBar from "$lib/components/Bar/StoryBar.svelte";
+    import Post from "$lib/components/Post/Post.svelte";
 </script>
 
 <section class="min-h-screen flex justify-center items-center">
@@ -12,6 +13,9 @@
         <div>
             <NavigationBar />
             <StoryBar />
+            <section>
+                <Post />
+            </section>
         </div>
         <TabBar />
     </Device>
