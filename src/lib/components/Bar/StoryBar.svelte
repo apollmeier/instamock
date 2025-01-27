@@ -6,7 +6,7 @@
 <section class="px-2.5 pt-2 pb-4 border-b border-gray-30">
     <ul class="flex gap-5 *:shrink-0">
         <li>
-            <Avatar src="https://picsum.photos/128/128" size="17" add>
+            <Avatar src="https://picsum.photos/68" size="17" add>
                 <StoryRing width="3px" gap="2px" status="new"/>
             </Avatar>
         </li>

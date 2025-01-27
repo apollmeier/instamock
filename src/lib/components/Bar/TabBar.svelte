@@ -23,7 +23,7 @@
                 <IconReels class="text-gray-40"/>
             </li>
             <li class="flex justify-center items-center">
-                <Avatar src="https://picsum.photos/48/48"/>
+                <Avatar src="https://picsum.photos/68"/>
             </li>
         </ul>
     </nav>
