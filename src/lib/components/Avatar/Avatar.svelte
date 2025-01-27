@@ -11,7 +11,11 @@
 
 <div>
     <div class="relative flex justify-center items-center" style="--size: {size}">
-        <img {src} class="rounded-full aspect-square">
+        {#if src}
+            <img {src} class="rounded-full aspect-square" alt="">
+        {:else}
+            <div class="img-placeholder rounded-full aspect-square bg-gray-20"></div>
+        {/if}
 
         {#if add}
         <div class="add absolute">
@@ -24,7 +28,8 @@
 </div>
 
 <style>
-    img {
+    img,
+    .img-placeholder {
         width: calc(var(--spacing) * var(--size));
     }
 
