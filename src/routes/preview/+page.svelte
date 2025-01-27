@@ -1,9 +1,9 @@
 <script>
     import Device from '$lib/components/Device/Device.svelte';
-    import TabBar from "$lib/components/Bars/TabBar.svelte";
-    import StatusBar from "$lib/components/Bars/StatusBar.svelte";
-    import NavigationBar from "$lib/components/Bars/NavigationBar.svelte";
-    import Stories from "$lib/components/Stories/Stories.svelte";
+    import TabBar from "$lib/components/Bar/TabBar.svelte";
+    import StatusBar from "$lib/components/Bar/StatusBar.svelte";
+    import NavigationBar from "$lib/components/Bar/NavigationBar.svelte";
+    import StoryBar from "$lib/components/Bar/StoryBar.svelte";
 </script>
 
 <section class="min-h-screen flex justify-center items-center">
@@ -11,7 +11,7 @@
         <StatusBar />
         <div>
             <NavigationBar />
-            <Stories />
+            <StoryBar />
         </div>
         <TabBar />
     </Device>
