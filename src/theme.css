@@ -1,4 +1,7 @@
 @theme {
+    --aspect-portrait: 4/5;
+    --aspect-landscape: 1.91/1;
+
     --color-*: initial;
     --color-transparent: transparent;
     --color-current: currentColor;
