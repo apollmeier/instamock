@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+    import 'overlayscrollbars/overlayscrollbars.css';
+
 	let { children } = $props();
 </script>
 

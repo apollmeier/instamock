@@ -5,18 +5,27 @@
     import NavigationBar from "$lib/components/Bar/NavigationBar.svelte";
     import StoryBar from "$lib/components/Bar/StoryBar.svelte";
     import Post from "$lib/components/Post/Post.svelte";
+    import {OverlayScrollbarsComponent} from "overlayscrollbars-svelte";
+
 </script>
 
 <section class="min-h-screen flex justify-center items-center">
     <Device>
-        <StatusBar />
-        <div>
-            <NavigationBar />
-            <StoryBar />
+        <StatusBar/>
+        <OverlayScrollbarsComponent defer options={{
+            overflow: {x: 'hidden'},
+            scrollbars: {
+                autoHide: 'scroll',
+                autoHideDelay: 500,
+                autoHideSuspend: true
+            }
+        }} class="grow">
+            <NavigationBar/>
+            <StoryBar/>
             <section>
-                <Post />
+                <Post/>
             </section>
-        </div>
-        <TabBar />
+        </OverlayScrollbarsComponent>
+        <TabBar/>
     </Device>
 </section>
