@@ -1,8 +1,7 @@
 <script>
 	import '../app.css';
-    import 'overlayscrollbars/overlayscrollbars.css';
 
-	let { children } = $props();
+    let { children } = $props();
 </script>
 
 <main class="min-h-screen">
