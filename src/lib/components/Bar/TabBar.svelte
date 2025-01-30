@@ -7,7 +7,7 @@
     import Avatar from '$lib/components/Avatar/Avatar.svelte';
 </script>
 
-<section class="absolute bottom-0 w-full bg-white border-t border-gray-30">
+<section class="bg-white border-t border-gray-30">
     <nav class="pt-2 pb-5">
         <ul class="grid grid-cols-5">
             <li class="flex justify-center items-center">

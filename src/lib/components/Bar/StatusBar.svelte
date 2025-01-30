@@ -1,26 +1,21 @@
 <script>
-    import {onMount} from "svelte";
+    import { SvelteDate } from 'svelte/reactivity';
 
-    let currentDateTime = new Date();
+    let date = new SvelteDate();
 
-    onMount(() => {
+    const pad = (n) => n < 10 ? '0' + n : n;
+
+    $effect(() => {
         const interval = setInterval(() => {
-            currentDateTime = new Date();
+            date.setTime(Date.now());
         }, 1000);
 
         return () => {
             clearInterval(interval);
         };
     });
-
-    function getHour(c) {
-        return c.getHours();
-    }
-    function getMinute(c) {
-        return c.getMinutes() < 10 ? "0" + c.getMinutes() : c.getMinutes();
-    }
 </script>
 
 <section class="p-4 pb-2 flex flex-row">
-    <time class="font-semibold">{getHour(currentDateTime)}:{getMinute(currentDateTime)}</time>
+    <time class="font-semibold">{date.getHours()}:{pad(date.getMinutes())}</time>
 </section>
