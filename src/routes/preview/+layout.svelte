@@ -9,3 +9,7 @@
         {@render children()}
     </Device>
 </main>
+
+<style>
+    @import 'overlayscrollbars/overlayscrollbars.css';
+</style>

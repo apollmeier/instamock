@@ -28,7 +28,3 @@
     </OverlayScrollbarsComponent>
     <TabBar/>
 </div>
-
-<style>
-    @import 'overlayscrollbars/overlayscrollbars.css';
-</style>
