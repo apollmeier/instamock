@@ -5,7 +5,6 @@
     import StatusBar from "$lib/components/Bar/StatusBar.svelte";
     import NavigationBar from "$lib/components/Bar/NavigationBar.svelte";
     import StoryBar from "$lib/components/Bar/StoryBar.svelte";
-    import Post from "$lib/components/Post/Post.svelte";
 
     const scrollbarOption = {
         overflow: {x: 'hidden'},
@@ -22,9 +21,10 @@
     <OverlayScrollbarsComponent defer options={scrollbarOption} class="grow">
         <NavigationBar/>
         <StoryBar/>
-        <section>
-            <Post/>
-        </section>
     </OverlayScrollbarsComponent>
     <TabBar/>
 </div>
+
+<style>
+    @import 'overlayscrollbars/overlayscrollbars.css';
+</style>
