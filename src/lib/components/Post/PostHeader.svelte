@@ -1,6 +1,6 @@
 <script>
     import Avatar from "$lib/components/Avatar/Avatar.svelte";
-    import IconOptions from "~icons/instamock24/Options"
+    import IconOptions from "~icons/instamock/Options"
 </script>
 
 <div class="p-2.5 flex items-center border-b border-gray-30">

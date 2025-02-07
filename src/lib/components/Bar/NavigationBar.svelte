@@ -1,11 +1,11 @@
 <script>
-    import IconLike from '~icons/instamock24/Like'
-    import IconShare from '~icons/instamock24/Share'
-    import IconChevronDown from '~icons/instamock16/ChevronDown'
+    import IconLike from '~icons/instamock/Like'
+    import IconShare from '~icons/instamock/Share'
+    import IconChevronDown from '~icons/instamock/ChevronDown'
 </script>
 
 <section class="px-4 py-2 flex flex-row items-center gap-5">
-    <h2 class="text-xl font-bold mr-auto">For you <IconChevronDown class="inline-block"/></h2>
+    <h2 class="text-xl font-bold mr-auto">For you <IconChevronDown class="inline-block size-4"/></h2>
     <div class="relative">
         <IconLike class="text-gray-40"/>
         <span class="absolute top-0 right-0 size-2 rounded-full bg-red-100 ring-2 ring-white"></span>

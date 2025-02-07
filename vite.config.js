@@ -11,16 +11,16 @@ export default defineConfig({
 		Icons({
 			compiler: 'svelte',
 			customCollections: {
-				'instamock16': FileSystemIconLoader(
-					'./src/lib/assets/icons/16',
+				'instamock': FileSystemIconLoader(
+					'./src/lib/assets/icons/',
 				),
-				'instamock24': FileSystemIconLoader(
-					'./src/lib/assets/icons/24',
-				),
-				'instamock32': FileSystemIconLoader(
-					'./src/lib/assets/icons/32',
-				)
-			}
+			},
+			iconCustomizer(collection, icon, props) {
+				if (collection === 'instamock') {
+					props.width = '1.5rem'
+					props.height = '1.5rem'
+				}
+			},
 		})
 	]
 });
