@@ -12,7 +12,7 @@ export default defineConfig({
 			compiler: 'svelte',
 			customCollections: {
 				'instamock': FileSystemIconLoader(
-					'./src/lib/assets/icons/',
+					'./src/lib/icons/',
 				),
 			},
 			iconCustomizer(collection, icon, props) {
