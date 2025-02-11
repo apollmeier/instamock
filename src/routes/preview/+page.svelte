@@ -1,4 +1,5 @@
 <script>
+    import 'overlayscrollbars/overlayscrollbars.css'
     import {OverlayScrollbarsComponent} from "overlayscrollbars-svelte";
 
     import TabBar from "$lib/components/Bar/TabBar.svelte";
@@ -24,7 +25,3 @@
     </OverlayScrollbarsComponent>
     <TabBar/>
 </div>
-
-<style>
-    @import 'overlayscrollbars/overlayscrollbars.css';
-</style>
