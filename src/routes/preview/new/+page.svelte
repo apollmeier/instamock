@@ -4,18 +4,11 @@
     import 'overlayscrollbars/overlayscrollbars.css'
     import {OverlayScrollbarsComponent} from "overlayscrollbars-svelte";
     import StatusBar from "$lib/components/Bar/StatusBar.svelte";
+    import ScrollWrapper from "$lib/components/ScrollWrapper/ScrollWrapper.svelte";
     import IconClose from "~icons/instamock/Close";
     import {filedrop} from "$lib/actions/filedrop.svelte.js";
 
     const flipDurationMs = 300;
-    const scrollbarOption = {
-        overflow: {x: 'hidden'},
-        scrollbars: {
-            autoHide: 'scroll',
-            autoHideDelay: 500,
-            autoHideSuspend: true
-        }
-    }
 
     let items = $state([])
     let itemId = 0
@@ -52,7 +45,7 @@
         <h2 class="text-xl font-bold mr-auto">New post</h2>
         <span class="text-sm text-blue-60 font-bold">Save</span>
     </div>
-    <OverlayScrollbarsComponent class="grow" defer options={scrollbarOption}>
+    <ScrollWrapper class="grow">
         <div class="grow grid grid-cols-3 gap-1 auto-rows-min" onconsider={handleDnd}
              onfinalize={handleDnd} use:dndzone="{{items, flipDurationMs}}">
             {#each items as item(item.id)}
@@ -61,5 +54,5 @@
                 </div>
             {/each}
         </div>
-    </OverlayScrollbarsComponent>
+    </ScrollWrapper>
 </section>
