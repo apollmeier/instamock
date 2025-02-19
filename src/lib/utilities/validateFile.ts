@@ -1,4 +1,4 @@
-export function validateMimeType(mimeType, acceptedTypes) {
+export function validateMimeType(mimeType: string, acceptedTypes: string[]): boolean {
     if (!acceptedTypes || acceptedTypes.length === 0) {
         return true;
     }
@@ -7,7 +7,7 @@ export function validateMimeType(mimeType, acceptedTypes) {
     const normalizedMimeType = mimeType.toLowerCase();
 
     // Split the MIME type into type and subtype
-    const [fileType, fileSubtype] = normalizedMimeType.split('/');
+    const [fileType] = normalizedMimeType.split('/');
 
     // Check each accepted type
     return acceptedTypes.some(acceptedType => {
@@ -27,4 +27,12 @@ export function validateMimeType(mimeType, acceptedTypes) {
 
         return false;
     });
+}
+
+export function validateFileSize(size: number, maxSize: number): boolean {
+    if (!maxSize || maxSize === 0) {
+        return true;
+    }
+
+    return size <= maxSize;
 }

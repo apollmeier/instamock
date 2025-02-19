@@ -1,6 +1,14 @@
-import {validateMimeType} from "$lib/utilities/validateFile.js";
+import {validateFileSize, validateMimeType} from "$lib/utilities/validateFile.ts";
 
-export function filedrop(node, accept = []) {
+export function filedrop(node, params) {
+    const {accept, max} = {
+        ...{
+            accept: [],
+            max: 0
+        },
+        ...params
+    }
+
     function handleDragOver(e) {
         e.preventDefault();
     }
@@ -10,17 +18,26 @@ export function filedrop(node, accept = []) {
 
         const [...files] = e.dataTransfer.files;
 
-        const validFiles = files.filter((file) => {
-            return validateMimeType(file.type, accept);
-        });
+        const errors = []
 
-        const fileDropped = new CustomEvent('filedropped', {
+        files.forEach((file) => {
+            if (!validateMimeType(file.type, accept)) {
+                errors.push('Invalid mime type: ' + file.name)
+            }
+
+            if (!validateFileSize(file.size / 1000, max)) {
+                errors.push('File too large: ' + file.name)
+            }
+        })
+
+        const fileDropEvent = new CustomEvent('filedrop', {
             detail: {
-                files: validFiles
+                files: files,
+                errors: errors
             }
         });
 
-        node.dispatchEvent(fileDropped)
+        node.dispatchEvent(fileDropEvent)
     }
 
     $effect(() => {
