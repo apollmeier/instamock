@@ -1,4 +1,4 @@
-import {validateFileSize, validateMimeType} from "$lib/utilities/validateFile.ts";
+import {validateFileSize, validateMimeType} from "$lib/utilities/file";
 
 export function filedrop(node, params) {
     const {accept, max} = {

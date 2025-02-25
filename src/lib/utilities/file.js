@@ -1,4 +1,4 @@
-export function validateMimeType(mimeType: string, acceptedTypes: string[]): boolean {
+export function validateMimeType(mimeType, acceptedTypes) {
     if (!acceptedTypes || acceptedTypes.length === 0) {
         return true;
     }
@@ -29,10 +29,20 @@ export function validateMimeType(mimeType: string, acceptedTypes: string[]): boo
     });
 }
 
-export function validateFileSize(size: number, maxSize: number): boolean {
+export function validateFileSize(size, maxSize) {
     if (!maxSize || maxSize === 0) {
         return true;
     }
 
     return size <= maxSize;
+}
+
+export function readAsDataURL(file) {
+    return new Promise((resolve) => {
+        let fileReader = new FileReader();
+        fileReader.onload = function () {
+            return resolve({data: fileReader.result, name: file.name, size: file.size, type: file.type});
+        }
+        fileReader.readAsDataURL(file);
+    })
 }
