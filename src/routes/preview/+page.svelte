@@ -6,14 +6,12 @@
     import StoryBar from "$lib/components/Bar/StoryBar.svelte";
     import TabBar from "$lib/components/Bar/TabBar.svelte";
 
-    const scrollbarOption = {
-        overflow: {x: 'hidden'},
-        scrollbars: {
-            autoHide: 'scroll',
-            autoHideDelay: 500,
-            autoHideSuspend: true
-        }
-    }
+    import {liveQuery} from "dexie";
+    import {db} from "$lib/db";
+
+    const posts = liveQuery(
+        () => db.posts.toArray()
+    );
 </script>
 
 <div class="h-full flex flex-col">
